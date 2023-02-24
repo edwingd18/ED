@@ -16,34 +16,32 @@
         let precio = document.getElementById("elPrecio").value;
         let salario = document.getElementById("elSalario").value;
         let procedimiento = document.getElementById("elProcedimiento").value;
-    
-        // Calcular copago
-        let copago = calcularCopago(precio, salario);
+        let copago = calcularCopago(procedimiento, precio, salario);
+        let nuevoCopago = {
+            procedimiento: procedimiento,
+            precio: precio,
+            salario: salario,
+            copago: copago
+            };
+            infoCopagos.unshift(nuevoCopago);
+            console.log(infoCopagos)
     
         // Mostrar resultado en el elemento HTML
         document.getElementById("laRespuesta").value = `Para el procedimiento "${procedimiento}", el copago es de $${copago}.`;
-    }
+    
     
         
-        
-
-
-
         // Incluir la lógica para crear nuevo objeto, adicionar al inicio
         // de la lista infoCopagos y desplegar por consola
     
             
             // Crear objeto y agregar al inicio de la lista infoCopagos
-        let infoCopago = {
-        procedimiento: procedimiento,
-        precio: precio,
-        salario: salario,
-        copago: copago
-        };
-        infoCopagos.unshift(infoCopago);
+
+
+    }
+
             
-        // Mostrar infoCopagos
-        mostrarInfoCopagos();
+    
           
 
     
