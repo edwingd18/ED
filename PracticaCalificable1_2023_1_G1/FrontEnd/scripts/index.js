@@ -16,7 +16,7 @@
         let precio = document.getElementById("elPrecio").value;
         let salario = document.getElementById("elSalario").value;
         let procedimiento = document.getElementById("elProcedimiento").value;
-        let copago = calcularCopago(procedimiento, precio, salario);
+        let copago = calcularCopago(precio, salario);
         let nuevoCopago = {
             procedimiento: procedimiento,
             precio: precio,
@@ -27,7 +27,7 @@
             console.log(infoCopagos)
     
         // Mostrar resultado en el elemento HTML
-        document.getElementById("laRespuesta").value = `Para el procedimiento "${procedimiento}", el copago es de $${copago}.`;
+        document.getElementById("laRespuesta").value = `Para el procedimiento "${procedimiento}", el copago es de ${copago}.`;
     
     
         

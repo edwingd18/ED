@@ -11,7 +11,7 @@ function calcularCopago(precio,salario){
         precio = precio*0.36
     }
 
-    return (precio)
+    return precio
 }
 
 
